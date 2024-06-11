@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
+    <title>Dialog Autofocus Reproducer</title>
+  </head>
+  <body>
+    <p>
+      Clicking any of the below buttons will open a dialog. When behaving
+      correctly, Button2 should always have the focus, after the dialog is
+      opened.
+    </p>
+    <button onclick="document.querySelector('abc-dialog').showModal()">
+      Show Custom Dialog with custom Buttons ❌
+    </button>
+    <button
+      onclick="document.querySelector('abc-dialog-native-buttons').showModal()"
+    >
+      Show Custom Dialog with native Buttons ✔
+    </button>
+    <button onclick="document.querySelector('dialog#d1').showModal()">
+      Show Native Dialog with native Buttons ✔
+    </button>
+    <button onclick="document.querySelector('dialog#d2').showModal()">
+      Show Native Dialog with custom Buttons ❌
+    </button>
+    <abc-dialog></abc-dialog>
+    <abc-dialog-native-buttons></abc-dialog-native-buttons>
+    <dialog id="d1">
+      <button>Button1</button>
+      <button autofocus>Button2</button>
+    </dialog>
+    <dialog id="d2">
+      <abc-button>Button1</abc-button>
+      <abc-button autofocus>Button2</abc-button>
+    </dialog>
+  </body>
+</html>
