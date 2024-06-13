@@ -1,0 +1,22 @@
+{
+  "name": "dialog-autofocus-reproducer",
+  "version": "1.0.0",
+  "description": "small reproducer showcasing an implementation bug in chromium",
+  "main": "index.js",
+  "scripts": {
+    "serve": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavydShapovalov/dialog-autofocus-reproducer.git"
+  },
+  "author": "Davyd Shapovalov <davyd0909@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavydShapovalov/dialog-autofocus-reproducer/issues"
+  },
+  "homepage": "https://github.com/DavydShapovalov/dialog-autofocus-reproducer#readme",
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}
